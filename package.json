@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test:lodash": "mocha -r esm lodash/test/*.test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/JX-Zhuang/coding/issues"
   },
-  "homepage": "https://github.com/JX-Zhuang/coding#readme"
+  "homepage": "https://github.com/JX-Zhuang/coding#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "mocha": "^8.3.2"
+  }
 }
