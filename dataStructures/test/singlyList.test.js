@@ -21,9 +21,13 @@ describe('LinkedList', function () {
         assert.equal(linkedList.get(2), 2);
         assert.equal(linkedList.get(3), 3);
         linkedList.insert(10, 1);
+        assert.equal(linkedList.insert(0, 0), false);
+        assert.equal(linkedList.insert(1, 6), false);
         assert.equal(linkedList.get(1), 10);
         assert.equal(linkedList.get(2), 1);
         assert.equal(linkedList.get(3), 2);
         assert.equal(linkedList.get(4), 3);
+        assert.equal(linkedList.get(0), -1);
+        assert.equal(linkedList.get(5), -1);
     });
 })
