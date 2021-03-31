@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:lodash": "mocha -r esm lodash/test/*.test.js",
+    "test:dataStructures": "mocha -r esm dataStructures/test/*.test.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,8 @@
   "homepage": "https://github.com/JX-Zhuang/coding#readme",
   "dependencies": {
     "esm": "^3.2.25",
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
   }
 }
