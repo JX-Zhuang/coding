@@ -30,4 +30,16 @@ describe('LinkedList', function () {
         assert.equal(linkedList.get(0), -1);
         assert.equal(linkedList.get(5), -1);
     });
+    it('test LinkedList traverse', function () {
+        var linkedList = new LinkedList();
+        for (var i = 1; i < 5; i++) {
+            linkedList.insert(i, i);
+        }
+        var header = linkedList.getHeader();
+        var index = 1;
+        while (header) {
+            assert.equal(header.item, index++);
+            header = header.next;
+        }
+    });
 })

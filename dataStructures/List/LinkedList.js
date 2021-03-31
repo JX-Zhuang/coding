@@ -43,4 +43,7 @@ export default class LinkedList {
         }
         return -1;
     }
+    getHeader() {
+        return this.header.next;
+    }
 }
