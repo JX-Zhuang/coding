@@ -9,13 +9,26 @@ export default class LinkedList {
         this.header = new ListNode();
         this.size = 0;
     }
-    makeEmpty() { }
     isEmpty() {
         return this.header.next === null;
     }
     isLast() { }
-    find(item) { }
-    delete(item) { }
+    find(item) {
+
+    }
+    delete(item) {
+        let prev = this.header;
+        let current = prev.next;
+        while (current) {
+            if (current.item === item) {
+                prev.next = current.next;
+                return true;
+            }
+            prev = current;
+            current = current.next;
+        }
+        return false;
+    }
     findPrevious() { }
     insert(item, index) {
         if (index < 1 || index > this.size + 1) return false;
@@ -28,7 +41,6 @@ export default class LinkedList {
         return true;
     }
     deleteList() { }
-    header() { }
     first() { }
     advance() { }
     retrieve() { }

@@ -45,4 +45,16 @@ describe('LinkedList', function () {
             header = header.next;
         }
     });
+    it('test LinkedList delete', function () {
+        var linkedList = new LinkedList();
+        linkedList.insert(1, 1);
+        linkedList.insert(2, 2);
+        linkedList.insert(3, 3);
+        assert.equal(linkedList.delete(1), true);
+        assert.equal(linkedList.get(1), 2);
+        assert.equal(linkedList.delete(1), false);
+        assert.equal(linkedList.delete(2), true);
+        assert.equal(linkedList.delete(3), true);
+        assert.equal(linkedList.isEmpty(), true);
+    });
 })
