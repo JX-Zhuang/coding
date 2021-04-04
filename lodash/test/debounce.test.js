@@ -14,10 +14,8 @@ describe('debounce', function () {
         var results = [debounced('a'), debounced('b'), debounced('c')];
         assert.deepStrictEqual(results, [undefined, undefined, undefined]);
         assert.strictEqual(callCount, 0);
-
         setTimeout(function () {
             assert.strictEqual(callCount, 1);
-
             var results = [debounced('d'), debounced('e'), debounced('f')];
             assert.deepStrictEqual(results, ['c', 'c', 'c']);
             assert.strictEqual(callCount, 1);
@@ -28,7 +26,6 @@ describe('debounce', function () {
             done();
         }, 256);
     });
-
     it('subsequent debounced calls return the last `func` result', function (done) {
         var debounced = debounce(identity, 32);
         debounced('a');
@@ -56,7 +53,6 @@ describe('debounce', function () {
             done();
         }, 5);
     });
-
     it('should apply default options', function (done) {
         var callCount = 0,
             debounced = debounce(function () { callCount++; }, 32, {});
@@ -69,7 +65,6 @@ describe('debounce', function () {
             done();
         }, 64);
     });
-
     it('should support a `leading` option', function (done) {
         var callCounts = [0, 0];
 
@@ -97,6 +92,7 @@ describe('debounce', function () {
             done();
         }, 64);
     });
+    return;
 
     it('subsequent leading debounced calls return the last `func` result', function (done) {
         var debounced = debounce(identity, 32, { 'leading': true, 'trailing': false }),
