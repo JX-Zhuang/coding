@@ -19,17 +19,17 @@ function debounce(func, wait = 0, options = {}) {
                     clearTimeout(t);
                     t = null;
                 }, wait);
-                return res;
             }
         } else {
+            if(!trailing) return;
             if (t) return res;
             t = setTimeout(() => {
                 res = func(...args);
                 clearTimeout(t);
                 t = null;
             }, wait);
-            return res;
         }
+        return res;
     }
 }
 export default debounce;

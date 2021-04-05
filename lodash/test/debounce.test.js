@@ -92,7 +92,6 @@ describe('debounce', function () {
             done();
         }, 64);
     });
-    return;
 
     it('subsequent leading debounced calls return the last `func` result', function (done) {
         var debounced = debounce(identity, 32, { 'leading': true, 'trailing': false }),
@@ -181,6 +180,7 @@ describe('debounce', function () {
             done();
         }, 1);
     });
+    return;
 
     it('should queue a trailing call for subsequent debounced calls after `maxWait`', function (done) {
         var callCount = 0;
